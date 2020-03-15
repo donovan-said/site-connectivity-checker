@@ -43,5 +43,26 @@ def arg_parser():
 
     return args
 
+
+def prepare_url(argparse_input):
+    """A function to modify user input into a functional URL.
+
+    Arguments:
+
+    Returns:
+    """
+
+    # Turn argparse Namespace into Dict
+    user_input = vars(argparse_input)
+    print (user_input)
+    # Get url key value
+    url_input = user_input.get('url')
+    print(url_input)
+    # Prepend HTTP 
+    url_full = HTTP + url_input
+    print(url_full)
+
 if __name__ == "__main__":
-    pass
+    USER_INPUT = arg_parser()
+
+    prepare_url(USER_INPUT)
