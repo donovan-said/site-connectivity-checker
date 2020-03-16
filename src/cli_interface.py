@@ -54,13 +54,12 @@ def prepare_url(argparse_input):
 
     # Turn argparse Namespace into Dict
     user_input = vars(argparse_input)
-    print (user_input)
     # Get url key value
     url_input = user_input.get('url')
-    print(url_input)
-    # Prepend HTTP 
-    url_full = HTTP + url_input
-    print(url_full)
+    # Prepend HTTP
+    url_full = HTTPS + url_input
+
+    return url_full
 
 if __name__ == "__main__":
     USER_INPUT = arg_parser()

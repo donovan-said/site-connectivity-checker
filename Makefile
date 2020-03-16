@@ -6,7 +6,7 @@ TEST_PATH=./tests
 .DEFAULT: help
 help:
 	@echo "make lint"
-	@echo "       run pylint and mypy"
+	@echo "       run pylint"
 	@echo "make test"
 	@echo "       run tests"
 
